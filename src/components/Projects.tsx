@@ -5,26 +5,28 @@ import { motion } from "framer-motion"
 import { ExternalLink, Github } from "lucide-react"
 import { Link } from "react-router-dom"
 
+// Import images directly
+import projectImg1 from "/assets/images/project-image1.png"
+import projectImg2 from "/assets/images/project-image2.png"
+
 function Projects() {
   const proj_git_1 = import.meta.env.VITE_GITHUB_PROJECT1
   const proj_demo_1 = import.meta.env.VITE_DEMO_PROJECT1
-  const projectImg1 = "../assets/images/project-image1.png"
   const proj_git_2 = import.meta.env.VITE_GITHUB_PROJECT2
   const proj_demo_2 = import.meta.env.VITE_DEMO_PROJECT2
-  const projectImg2 = "../assets/images/project-image2.png"
 
   const projects = [
     {
       id: 1, title: "Fit-Track: A fitness tracking app with Firebase",
       description: "Fit-Track helps users log workouts, track fitness progress, and access a workout guide. Built with Firebase for authentication and real-time data storage, it offers an intuitive interface to visualize workout history and stay motivated",
-      image: new URL(projectImg1, import.meta.url).href, // Updated to use URL constructor
+      image: projectImg1, // Directly use the imported image
       github: proj_git_1, demo: proj_demo_1,
       tech: ["Firebase", "JavaScript", "React", "Chart.js", "Tailwind CSS", "React-Router", "Shadcn"]
     },
     {
       id: 2, title: "Personal Portfolio Website",
       description: "A modern and responsive portfolio website to showcase my projects, skills, and resume. This website is designed with a focus on clean UI, intuitive navigation, and smooth user experience, allowing potential employers or collaborators to learn more about my work and professional background",
-      image: new URL(projectImg2, import.meta.url).href,
+      image: projectImg2, // Directly use the imported image
       github: proj_git_2, demo: proj_demo_2,
       tech: ["JavaScript", "React", "Tailwind", "Shadcn", "React-Router", "Framer-Motion"]
     },
