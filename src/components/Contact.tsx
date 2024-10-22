@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { Card, CardContent } from "./ui/card"
 import { Button } from "./ui/button"
 import { ExternalLink, Github, Linkedin, Mail, Twitter } from 'lucide-react'
+import resumePath from "/assets/pdf/resume.pdf"
 
 function Contact() {
 
@@ -9,7 +10,6 @@ function Contact() {
   const linkedin = import.meta.env.VITE_LINKEDIN
   const twitter = import.meta.env.VITE_TWITTER
   const mail = import.meta.env.VITE_MAIL
-
 
   const socialLinks = [
     { name: 'GitHub', icon: Github, url: github },
@@ -90,7 +90,7 @@ function Contact() {
                 className="mt-10 text-center"
               >
                 <a
-                  href="resume-path"
+                  href={resumePath}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline"

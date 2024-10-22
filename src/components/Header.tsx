@@ -2,6 +2,8 @@ import { motion } from 'framer-motion'
 import { NavLink } from 'react-router-dom'
 import { Button } from './ui/button'
 import { Download } from 'lucide-react'
+import resumePath from "/assets/pdf/resume.pdf"
+
 function Header() {
     const name = import.meta.env.VITE_NAME
 
@@ -35,7 +37,7 @@ function Header() {
                             whileTap={{ scale: 0.95 }}
                         >
                             <Button asChild variant="outline" className="flex items-center">
-                                <a href="resume-path" download={`${name}_Resume.pdf`}>
+                                <a href={resumePath} download={`${name}_Resume.pdf`}>
                                     <Download className="mr-2 h-4 w-4" /> Download Resume
                                 </a>
                             </Button>
